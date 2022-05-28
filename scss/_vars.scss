@@ -1,19 +1,20 @@
 // Colors
-$bodyBg: hsl(216, 12%, 8%);
-
-$primary: hsl(25, 97%, 53%);
-
+// - Primary
+$bodyBg: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+// - Accent
+$blue: hsl(248, 32%, 49%);
+// - Neutral
 $white: hsl(0, 0%, 100%);
-$lightgrey: hsl(217, 12%, 63%);
-$mediumgrey: hsl(216, 12%, 54%);
-$darkblue: hsl(213, 19%, 18%);
-$verydarkblue: hsl(216, 12%, 8%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
 
 //Attribution
-$attr_text-color: #1f3251;
+$attr_text-color: hsl(248, 32%, 49%);
 $attr_grifano-color: #fff;
+$attr_span: hsl(249, 10%, 26%);
 
 // Typeface
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-$fontFamily: "Overpass", sans-serif;
-$mainFontSize: 15px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+$fontFamily: "Poppins", sans-serif;
+$mainFontSize: 16px;

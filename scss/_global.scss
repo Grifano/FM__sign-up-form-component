@@ -2,37 +2,40 @@ html {
   font-size: $mainFontSize;
 }
 // Full size webpage
-body {
-  background-color: $bodyBg;
-  font-family: $fontFamily;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow: hidden;
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-}
-// Components center
 // body {
 //   background-color: $bodyBg;
 //   font-family: $fontFamily;
-//   min-height: 100vh;
+//   height: 100vh;
 //   box-sizing: border-box;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
+//   overflow: hidden;
 //   main {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
 //     height: 100%;
-//     flex-grow: 1;
 //   }
 // }
+// Components center
+body {
+  background-color: $bodyBg;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $fontFamily;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+  }
+}
 
 // Attribution to author and Frontend Mentor platform
 .attribution {
@@ -46,6 +49,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  &__by {
+    color: $attr_span;
+  }
   &__text {
     margin-bottom: 4px;
     a {
@@ -72,10 +78,8 @@ body {
 
 // Container
 .container {
-  padding: 32px;
-  @media (max-width: 375px) {
-    padding: 24px;
-  }
+  max-width: 1110px + 48px;
+  padding: 24px;
 }
 
 // UI control
