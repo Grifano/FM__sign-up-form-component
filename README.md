@@ -1,4 +1,4 @@
-# Frontend Mentor - ???
+# Frontend Mentor - Intro component with sign up form
 
 This is a solution to the [Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg).
 Frontend Mentor challenges help you improve your coding skills by building realistic projects.
