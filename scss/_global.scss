@@ -1,0 +1,122 @@
+html {
+  font-size: $mainFontSize;
+}
+// Full size webpage
+body {
+  background-color: $bodyBg;
+  font-family: $fontFamily;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+// Components center
+// body {
+//   background-color: $bodyBg;
+//   font-family: $fontFamily;
+//   min-height: 100vh;
+//   box-sizing: border-box;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   main {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+//     flex-grow: 1;
+//   }
+// }
+
+// Attribution to author and Frontend Mentor platform
+.attribution {
+  color: $attr_text-color;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  &__text {
+    margin-bottom: 4px;
+    a {
+      color: $attr_text-color;
+      transition: all 0.5s ease 0s;
+      text-decoration: none;
+      &:hover {
+        color: #0061cc;
+      }
+    }
+  }
+}
+.grifano-logo {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 4px 4px 2px 4px;
+  color: $attr_grifano-color;
+  background-color: #0061cc;
+  span {
+    color: #d07f15;
+    background-color: #0061cc;
+  }
+}
+
+// Container
+.container {
+  padding: 32px;
+  @media (max-width: 375px) {
+    padding: 24px;
+  }
+}
+
+// UI control
+.show {
+  visibility: visible;
+  opacity: 100%;
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 80%;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 8px rgba(124, 135, 152, 0.2);
+  transition: all 0.3s ease 0s;
+  &__msg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 12px 24px;
+    background: $bodyBg;
+    border-radius: 15px;
+    text-align: center;
+    color: $white;
+    outline: none;
+    border-style: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: $bodyBg transparent transparent transparent;
+    }
+  }
+}

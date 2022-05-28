@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: #121417;
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.attribution {
+  color: #e6e6e6;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.attribution__text {
+  margin-bottom: 4px;
+}
+
+.attribution__text a {
+  color: white;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  text-decoration: none;
+}
+
+.attribution__text a:hover {
+  color: #d07f15;
+}
+
+.grifano-logo {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 4px 4px 2px 4px;
+  color: white;
+  background-color: #0061cc;
+}
+
+.grifano-logo span {
+  color: #d07f15;
+  background-color: #0061cc;
+}
+
+.container {
+  padding: 32px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 24px;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 100% !important;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 80%;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0px 4px 8px rgba(124, 135, 152, 0.2);
+          box-shadow: 0px 4px 8px rgba(124, 135, 152, 0.2);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.tooltip__msg {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  padding: 12px 24px;
+  background: #7c8798;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  outline: none;
+  border-style: none;
+}
+
+.tooltip__msg::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #7c8798 transparent transparent transparent;
+}
