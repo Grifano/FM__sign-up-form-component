@@ -270,6 +270,14 @@ body main {
   transition: all 0.3s ease 0s;
 }
 
+.error {
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 24px;
+  border-color: #ff7a7a !important;
+  color: #ff7a7a;
+}
+
 .show {
   visibility: visible;
   opacity: 100%;
@@ -406,15 +414,30 @@ body main {
           flex-direction: column;
 }
 
+.sign-up__form label {
+  font-size: 0;
+}
+
 @media (max-width: 768px) {
   .sign-up__form {
     padding: 24px;
   }
 }
 
-.sign-up__input {
-  min-height: 60px;
+.sign-up__input-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 20px;
+}
+
+.sign-up__input {
+  margin-bottom: 10px;
+  min-height: 60px;
   background-color: white;
   color: #3e3c49;
   font-size: 14px;
@@ -434,6 +457,19 @@ body main {
 
 .sign-up__input:focus {
   outline-color: #6055a5;
+}
+
+.sign-up__input:invalid {
+  color: #ff7a7a;
+  background: url("../images/icon-error.svg") top 50% right 24px no-repeat;
+}
+
+.sign-up__error {
+  color: #ff7a7a;
+  font-size: 10px;
+  line-height: 14px;
+  font-style: italic;
+  text-align: right;
 }
 
 .sign-up__submit {

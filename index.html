@@ -44,31 +44,52 @@
               <a href="#" class="sign-up__button button"
                 ><strong>Try it free 7 days</strong> then $20/mo. thereafter</a
               >
-              <form action="#" class="sign-up__form">
-                <input
-                  class="sign-up__input"
-                  type="text"
-                  name="fName"
-                  placeholder="First Name"
-                />
-                <input
-                  class="sign-up__input"
-                  type="text"
-                  name="lName"
-                  placeholder="Last Name"
-                />
-                <input
-                  class="sign-up__input"
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                />
-                <input
-                  class="sign-up__input"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                />
+              <form action="/" class="sign-up__form">
+                <div class="sign-up__input-body">
+                  <label for="fName">First Name</label>
+                  <input
+                    id="fName"
+                    class="sign-up__input"
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                  />
+                  <span role="alert" class="sign-up__error"></span>
+                </div>
+                <div class="sign-up__input-body">
+                  <label for="lName">Last Name</label>
+                  <input
+                    id="lName"
+                    class="sign-up__input"
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                  />
+                  <span role="alert" class="sign-up__error"></span>
+                </div>
+                <div class="sign-up__input-body">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    class="sign-up__input"
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                  />
+                  <span role="alert" class="sign-up__error"></span>
+                </div>
+                <div class="sign-up__input-body">
+                  <label for="password">Password</label>
+                  <input
+                    id="password"
+                    class="sign-up__input"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                  <span role="alert" class="sign-up__error"></span>
+                </div>
                 <button class="sign-up__submit button" type="submit">
                   Claim your free trial
                 </button>
@@ -104,6 +125,6 @@
       </p>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
