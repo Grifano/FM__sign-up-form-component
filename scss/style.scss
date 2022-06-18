@@ -85,12 +85,12 @@
     &:focus {
       outline-color: $blue;
     }
-    &:invalid {
+    &.error {
       color: $bodyBg;
       background: url("../images/icon-error.svg") top 50% right 24px no-repeat;
     }
   }
-  &__error {
+  &__error-msg {
     color: $bodyBg;
     font-size: 10px;
     line-height: 14px;

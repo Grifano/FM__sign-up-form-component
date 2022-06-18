@@ -459,12 +459,12 @@ body main {
   outline-color: #6055a5;
 }
 
-.sign-up__input:invalid {
+.sign-up__input.invalid {
   color: #ff7a7a;
   background: url("../images/icon-error.svg") top 50% right 24px no-repeat;
 }
 
-.sign-up__error {
+.sign-up__error-msg {
   color: #ff7a7a;
   font-size: 10px;
   line-height: 14px;

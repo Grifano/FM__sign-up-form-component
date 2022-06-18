@@ -44,7 +44,12 @@
               <a href="#" class="sign-up__button button"
                 ><strong>Try it free 7 days</strong> then $20/mo. thereafter</a
               >
-              <form action="/" class="sign-up__form">
+              <form
+                action="http://localhost:3000/"
+                method="post"
+                class="sign-up__form"
+                id="signUpForm"
+              >
                 <div class="sign-up__input-body">
                   <label for="fName">First Name</label>
                   <input
@@ -54,7 +59,11 @@
                     name="firstName"
                     placeholder="First Name"
                   />
-                  <span role="alert" class="sign-up__error"></span>
+                  <span
+                    role="alert"
+                    class="sign-up__error-msg"
+                    aria-hidden="true"
+                  ></span>
                 </div>
                 <div class="sign-up__input-body">
                   <label for="lName">Last Name</label>
@@ -65,7 +74,7 @@
                     name="lastName"
                     placeholder="Last Name"
                   />
-                  <span role="alert" class="sign-up__error"></span>
+                  <span role="alert" class="sign-up__error-msg"></span>
                 </div>
                 <div class="sign-up__input-body">
                   <label for="email">Email</label>
@@ -76,7 +85,7 @@
                     name="email"
                     placeholder="Email Address"
                   />
-                  <span role="alert" class="sign-up__error"></span>
+                  <span role="alert" class="sign-up__error-msg"></span>
                 </div>
                 <div class="sign-up__input-body">
                   <label for="password">Password</label>
@@ -86,8 +95,11 @@
                     type="password"
                     name="password"
                     placeholder="Password"
+                    min="8"
+                    aria-required="true"
+                    aria-invalid="false"
                   />
-                  <span role="alert" class="sign-up__error"></span>
+                  <span role="alert" class="sign-up__error-msg"></span>
                 </div>
                 <button class="sign-up__submit button" type="submit">
                   Claim your free trial
