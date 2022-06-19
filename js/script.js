@@ -4,13 +4,15 @@ const lastName = document.getElementById("lName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const form = document.getElementById("signUpForm");
+let messages = ["Error msg 1"]; //
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  form.querySelectorAll("input").forEach((input) => {
-    getCheckForm(input);
-  });
+  if (messages.length > 0) {
+    e.preventDefault();
+    form.querySelectorAll("input").forEach((input) => {
+      getCheckForm(input);
+    });
+  }
 });
 
 const setError = (el) => {
@@ -26,6 +28,7 @@ const setError = (el) => {
 
   // Add an error icon to the input
   el.classList.add("error");
+  messages.push("Error msg");
 
   if (elName) {
     switch (elName) {
@@ -52,11 +55,11 @@ const setSuccess = (el) => {
 
   // Remove an error icon to the input
   el.classList.remove("error");
+  messages.pop();
   // Set required attribute for element
   errorTextholder.innerText = "";
 };
 function getCheckForm(el) {
-  console.log(el.value);
   if (el.value === "") {
     setError(el);
   } else {
