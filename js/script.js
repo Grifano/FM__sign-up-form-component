@@ -4,11 +4,13 @@ const lastName = document.getElementById("lName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const form = document.getElementById("signUpForm");
-let messages = ["Error msg 1"]; //
+const inputControl = form.querySelector(".sign-up__error-msg");
+let messages = ["Error msg 1"];
 
 form.addEventListener("submit", (e) => {
   if (messages.length > 0) {
     e.preventDefault();
+
     form.querySelectorAll("input").forEach((input) => {
       getCheckForm(input);
     });
@@ -22,7 +24,7 @@ const setError = (el) => {
 
   // Converting the element name to the string for output message
   function convertElementName() {
-    let convElName = elName.replace(/([a-z])([A-Z])/g, "$1 $2");
+    let convElName = elName.replace(/([a-z])([A-Z])/g, "$1 $2"); //? What is "$1 $2" do?
     return convElName[0].toUpperCase() + convElName.slice(1);
   }
 
