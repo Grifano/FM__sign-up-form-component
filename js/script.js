@@ -6,6 +6,7 @@ const password = document.getElementById("password");
 const form = document.getElementById("signUpForm");
 const formInputs = form.querySelectorAll("input");
 const inputControl = form.querySelector(".sign-up__error-msg");
+const emailRegex = /\S+@\S+.[a-z]{2,3}$/gi;
 
 form.addEventListener("submit", (e) => {
   const checkedFormInputs = [];
@@ -27,24 +28,15 @@ const setError = (el) => {
 
   // Converting the element name to the string for output message
   function convertElementName() {
-    let convElName = elName.replace(/([a-z])([A-Z])/g, "$1 $2"); //? What is "$1 $2" do?
+    let convElName = elName.replace(/([a-z])([A-Z])/g, "$1 $2");
     return convElName[0].toUpperCase() + convElName.slice(1);
   }
 
-  // Add an error icon to the input
   el.classList.add("error");
-
-  if (elName) {
-    switch (elName) {
-      case "email":
-        // !  The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`)
-        errorTextholder.innerText = "Looks like this is not an email";
-        break;
-
-      default:
-        errorTextholder.innerText = `${convertElementName()} cannot be empty`;
-        break;
-    }
+  if (elName === "email") {
+    errorTextholder.innerText = "Looks like this is not an email";
+  } else {
+    errorTextholder.innerText = `${convertElementName()} cannot be empty`;
   }
 };
 const setSuccess = (el) => {
