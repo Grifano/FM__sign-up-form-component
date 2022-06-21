@@ -87,7 +87,11 @@
                     pattern="^[a-zA-Z]+@[a-zA-Z.-]+\.[a-z]{2,4}$"
                     title="Are you shure that is something like that name@email.com?"
                   />
-                  <span role="alert" class="sign-up__error-msg"></span>
+                  <span
+                    role="alert"
+                    class="sign-up__error-msg"
+                    aria-hidden="true"
+                  ></span>
                 </div>
                 <div class="sign-up__input-body">
                   <label for="password">Password</label>
@@ -97,11 +101,14 @@
                     type="password"
                     name="password"
                     placeholder="Password"
-                    min="8"
                     aria-required="true"
                     aria-invalid="false"
                   />
-                  <span role="alert" class="sign-up__error-msg"></span>
+                  <span
+                    role="alert"
+                    class="sign-up__error-msg"
+                    aria-hidden="true"
+                  ></span>
                 </div>
                 <button class="sign-up__submit button" type="submit">
                   Claim your free trial
