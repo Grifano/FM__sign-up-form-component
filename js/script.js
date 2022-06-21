@@ -4,16 +4,19 @@ const lastName = document.getElementById("lName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const form = document.getElementById("signUpForm");
+const formInputs = form.querySelectorAll("input");
 const inputControl = form.querySelector(".sign-up__error-msg");
-let messages = ["Error msg 1"];
 
 form.addEventListener("submit", (e) => {
-  if (messages.length > 0) {
-    e.preventDefault();
-
-    form.querySelectorAll("input").forEach((input) => {
-      getCheckForm(input);
-    });
+  const checkedFormInputs = [];
+  e.preventDefault();
+  formInputs.forEach((input) => {
+    if (getCheckForm(input)) {
+      checkedFormInputs.push("checked");
+    }
+  });
+  if (formInputs.length === checkedFormInputs.length) {
+    form.submit();
   }
 });
 
@@ -30,11 +33,11 @@ const setError = (el) => {
 
   // Add an error icon to the input
   el.classList.add("error");
-  messages.push("Error msg");
 
   if (elName) {
     switch (elName) {
       case "email":
+        // !  The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`)
         errorTextholder.innerText = "Looks like this is not an email";
         break;
 
@@ -57,14 +60,16 @@ const setSuccess = (el) => {
 
   // Remove an error icon to the input
   el.classList.remove("error");
-  messages.pop();
+  // messages.pop();
   // Set required attribute for element
   errorTextholder.innerText = "";
 };
 function getCheckForm(el) {
   if (el.value === "") {
     setError(el);
+    return false;
   } else {
     setSuccess(el);
+    return true;
   }
 }
