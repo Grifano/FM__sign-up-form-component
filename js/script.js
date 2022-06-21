@@ -6,14 +6,13 @@ const password = document.getElementById("password");
 const form = document.getElementById("signUpForm");
 const formInputs = form.querySelectorAll("input");
 const inputControl = form.querySelector(".sign-up__error-msg");
-const emailRegex = /\S+@\S+.[a-z]{2,3}$/gi;
 
 form.addEventListener("submit", (e) => {
   const checkedFormInputs = [];
   e.preventDefault();
   formInputs.forEach((input) => {
     if (getCheckForm(input)) {
-      checkedFormInputs.push("checked");
+      checkedFormInputs.push("valid");
     }
   });
   if (formInputs.length === checkedFormInputs.length) {
@@ -52,7 +51,6 @@ const setSuccess = (el) => {
 
   // Remove an error icon to the input
   el.classList.remove("error");
-  // messages.pop();
   // Set required attribute for element
   errorTextholder.innerText = "";
 };
